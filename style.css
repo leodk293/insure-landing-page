@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.insurance{
+    background-color: rgb(44 38 64);
+    padding: 20px;
+}
+.insurance img{
+    width: 60%; object-fit: cover; transform: translateY(100px);
+}
+.insurance .container{
+    animation: scale 500ms both ease-in-out;
+}
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes different{
+    0%{
+        transform: scale(0) rotate(180deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+.different{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 200px;
+}
+.different .container{
+    animation: different 2000ms both ease-in;
+}
+
+.different h1{
+    margin-left: 8%;
+}
+footer{
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-top: 150px;
+}
+footer a{
+    color: #111;
+    text-decoration: none;
+}
+.way-work{
+    border: 1px solid rgb(44 38 64);
+    background-color: rgb(44 38 64);
+    padding: 50px;
+    margin: 200px auto;
+}
+footer li{
+    list-style: none;
+}
+
+.footer-bottom ul div li a:hover{
+    text-decoration: underline;
+}
+.footer-bottom ul + li{
+    color: rgb(128, 128, 128);
+}
+.f-line{
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.371);
+    height: 3px;
+    margin-top: 50px;
+    transform: translateX(100px);
+}
+.media{
+    display: flex; flex-direction: row; gap: 10px;
+}
+.media img{
+    cursor: pointer;
+}
+body{
+    animation: loaded 500ms both ease-in-out;
+}
+@keyframes loaded{
+    0%{
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#navbarNav ul>:nth-child(4):hover{
+    color: #fff;
+    background-color: #11111128;
+}
+@media screen and (max-width:900px) {
+    .media{
+        justify-content: center;
+    }
+    .insurance img{
+        order: 1;
+        transform: translateY(0);
+        width: 100%;
+        object-fit: cover;
+        transform: translateY(-10px);
+    }
+    
+    .insurance .text{
+        order: 2;
+        align-items: center;
+    }
+    .insurance .text h1{
+        text-align: center;
+    }
+    .different .container .row div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .different .container h2{
+        text-align: center;
+    }
+    .container p{
+        text-align: center;
+    }
+    .different{
+        align-items: center;
+    }
+    .different h1{
+        margin-left: 0%;
+    }
+    
+    footer{
+        text-align: center;
+    }
+    .footer-top .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .footer-bottom .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .f-line{
+        display: none;
+    }
+
+    
+}
